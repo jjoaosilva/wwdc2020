@@ -25,6 +25,8 @@
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
 		9B1913F1246B6301009B0835 /* IntroductionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1913F0246B6301009B0835 /* IntroductionScene.swift */; };
+		9BDDB18D246C23E200B0DDE9 /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDB18C246C23E200B0DDE9 /* Cactus.swift */; };
+		9BDDB190246C763300B0DDE9 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BDDB18F246C763300B0DDE9 /* Glossary.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -163,6 +165,8 @@
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
 		9B1913F0246B6301009B0835 /* IntroductionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionScene.swift; sourceTree = "<group>"; };
+		9BDDB18C246C23E200B0DDE9 /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
+		9BDDB18F246C763300B0DDE9 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +315,7 @@
 				5EF2F9AD2054BBF300191409 /* LiveViewController.swift */,
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
 				9B1913F0246B6301009B0835 /* IntroductionScene.swift */,
+				9BDDB18C246C23E200B0DDE9 /* Cactus.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				5EF2F97E2054B6E400191409 /* ManifestPlist.strings */,
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
 				5E551EC42371FC3F00784365 /* Assets.xcassets */,
+				9BDDB18F246C763300B0DDE9 /* Glossary.plist */,
 			);
 			path = PrivateResources;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 			buildPhases = (
 				5E086DD22051E35D004D8D25 /* Copy Book Contents */,
 				5E086DC62051DB17004D8D25 /* Resources */,
+				9BDDB18E246C2E3A00B0DDE9 /* ShellScript */,
 			);
 			buildRules = (
 				5E086DD42051E415004D8D25 /* PBXBuildRule */,
@@ -545,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDDB190246C763300B0DDE9 /* Glossary.plist in Resources */,
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,
@@ -577,6 +585,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "PLAYGROUND_BOOK_PATH=\"${BUILT_PRODUCTS_DIR}/${PLAYGROUND_BOOK_FILE_NAME}.playgroundbook\"\nPRIVATERESOURCES_FOLDER_PATH=\"${PLAYGROUND_BOOK_PATH}/Contents/PrivateResources\"\nPUBLICRESOURCES_FOLDER_PATH=\"${PLAYGROUND_BOOK_PATH}/Contents/PublicResources\"\n\nDESTINATION_FOLDER_PATH=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\n\nif [[ -d \"${PRIVATERESOURCES_FOLDER_PATH}\" ]]; then\n    ditto \"${PRIVATERESOURCES_FOLDER_PATH}\" \"${DESTINATION_FOLDER_PATH}\"\nfi\n\nif [[ -d \"${PUBLICRESOURCES_FOLDER_PATH}\" ]]; then\n    ditto \"${PUBLICRESOURCES_FOLDER_PATH}\" \"${DESTINATION_FOLDER_PATH}\"\nfi\n\nmkdir -p \"${DERIVED_FILE_DIR}\"\ntouch \"${DERIVED_FILE_DIR}/embed-resources-marker\"\n";
+		};
+		9BDDB18E246C2E3A00B0DDE9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -r ~/Library/Mobile\\ Documents/iCloud\\~com\\~apple\\~Playgrounds/Documents/$PLAYGROUND_BOOK_FILE_NAME.playgroundbook;\nopen $TARGET_BUILD_DIR/$PLAYGROUND_BOOK_FILE_NAME.playgroundbook\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -611,6 +636,7 @@
 			files = (
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				9B1913F1246B6301009B0835 /* IntroductionScene.swift in Sources */,
+				9BDDB18D246C23E200B0DDE9 /* Cactus.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

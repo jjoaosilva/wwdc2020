@@ -7,7 +7,7 @@
 
 import UIKit
 import PlaygroundSupport
-
+import SpriteKit
 /// Instantiates a new instance of a live view.
 ///
 /// By default, this loads an instance of `LiveViewController` from `LiveView.storyboard`.
@@ -23,4 +23,13 @@ public func instantiateLiveView() -> PlaygroundLiveViewable {
     }
 
     return liveViewController
+}
+
+public func IntroductionLiveView() -> PlaygroundLiveViewable{
+    let view = SKView()
+    let scene = IntroductionScene()
+    scene.scaleMode = .resizeFill
+    view.presentScene(scene)
+    
+    return view
 }

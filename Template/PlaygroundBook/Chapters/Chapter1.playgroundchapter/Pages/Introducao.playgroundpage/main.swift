@@ -18,27 +18,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 //#-hidden-code
 
-import UIKit
-import PlaygroundSupport
-import SpriteKit
-import BookCore
-
-class IntroductionViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
-    
-    func setup(){
-        let view = SKView()
-        let scene = IntroductionScene()
-        scene.scaleMode = .resizeFill
-        view.presentScene(scene)
-        
-        self.view = view
-    }
-}
-// Present the view controller in the Live View window
-PlaygroundPage.current.liveView = IntroductionViewController()
+//import UIKit
+//import PlaygroundSupport
+//import SpriteKit
+//import BookCore
+//
+//class IntroductionViewController: UIViewController{
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        setup()
+//    }
+//
+//    func setup(){
+//        let view = SKView()
+//        let scene = IntroductionScene()
+//        scene.scaleMode = .resizeFill
+//        view.presentScene(scene)
+//
+//        self.view = view
+//    }
+//}
+//// Present the view controller in the Live View window
+//PlaygroundPage.current.liveView = IntroductionViewController()
 
 //#-end-hidden-code
