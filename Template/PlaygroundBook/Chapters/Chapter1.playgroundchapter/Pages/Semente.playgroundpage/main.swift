@@ -50,7 +50,7 @@ class SeedViewController: UIViewController{
     
     func setup(){
         let view = SKView()
-        let scene = IntroductionScene()
+        let scene = SeedScene()
         scene.scaleMode = .resizeFill
         view.presentScene(scene)
         
@@ -59,7 +59,7 @@ class SeedViewController: UIViewController{
 }
 
 
-public class IntroductionScene: SKScene{
+public class SeedScene: SKScene{
     
     var semente: SKSpriteNode = SKSpriteNode(imageNamed: "semente")
     var jarro: SKSpriteNode = SKSpriteNode(imageNamed: "jarro")

@@ -4,6 +4,16 @@
 <dict>
 	<key>Terms</key>
 	<dict>
+		<key>withSun</key>
+		<dict>
+			<key>Definition</key>
+			<string>Oberserve que withSun é do tipo Booleano, pois poderá receber `true` ou `false`</string>
+		</dict>
+		<key>withWater</key>
+		<dict>
+			<key>Definition</key>
+			<string>Oberserve que withWater é do tipo Booleano, pois poderá receber `true` ou `false`</string>
+		</dict>
 		<key>command</key>
 		<dict>
 			<key>Definition</key>

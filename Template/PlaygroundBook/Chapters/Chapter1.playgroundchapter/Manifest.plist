@@ -6,9 +6,11 @@
 	<string>ChapterOneName</string>
 	<key>Pages</key>
 	<array>
-		<string>PlaygroundPage.playgroundpage</string>
 		<string>Introducao.playgroundpage</string>
 		<string>Semente.playgroundpage</string>
+		<string>Agua.playgroundpage</string>
+		<string>Sol.playgroundpage</string>
+		<string>Adulta.playgroundpage</string>
 	</array>
 </dict>
 </plist>

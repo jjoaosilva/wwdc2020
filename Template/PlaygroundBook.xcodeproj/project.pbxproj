@@ -24,6 +24,10 @@
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
+		9B0DB749246D7CBC00DAA68D /* WaterLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB748246D7CBC00DAA68D /* WaterLiveScene.swift */; };
+		9B0DB74B246D7E0F00DAA68D /* SeedLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74A246D7E0F00DAA68D /* SeedLiveScene.swift */; };
+		9B0DB74D246DC13F00DAA68D /* SunLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74C246DC13F00DAA68D /* SunLiveScene.swift */; };
+		9B0DB74F246DF96A00DAA68D /* FinalLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74E246DF96A00DAA68D /* FinalLiveScene.swift */; };
 		9B1913F1246B6301009B0835 /* IntroductionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1913F0246B6301009B0835 /* IntroductionScene.swift */; };
 		9BDDB18D246C23E200B0DDE9 /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDB18C246C23E200B0DDE9 /* Cactus.swift */; };
 		9BDDB190246C763300B0DDE9 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BDDB18F246C763300B0DDE9 /* Glossary.plist */; };
@@ -164,6 +168,10 @@
 		5EF2F9AB2054BBF300191409 /* libBookCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		9B0DB748246D7CBC00DAA68D /* WaterLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterLiveScene.swift; sourceTree = "<group>"; };
+		9B0DB74A246D7E0F00DAA68D /* SeedLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedLiveScene.swift; sourceTree = "<group>"; };
+		9B0DB74C246DC13F00DAA68D /* SunLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunLiveScene.swift; sourceTree = "<group>"; };
+		9B0DB74E246DF96A00DAA68D /* FinalLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalLiveScene.swift; sourceTree = "<group>"; };
 		9B1913F0246B6301009B0835 /* IntroductionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionScene.swift; sourceTree = "<group>"; };
 		9BDDB18C246C23E200B0DDE9 /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
 		9BDDB18F246C763300B0DDE9 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
@@ -316,6 +324,10 @@
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
 				9B1913F0246B6301009B0835 /* IntroductionScene.swift */,
 				9BDDB18C246C23E200B0DDE9 /* Cactus.swift */,
+				9B0DB748246D7CBC00DAA68D /* WaterLiveScene.swift */,
+				9B0DB74A246D7E0F00DAA68D /* SeedLiveScene.swift */,
+				9B0DB74C246DC13F00DAA68D /* SunLiveScene.swift */,
+				9B0DB74E246DF96A00DAA68D /* FinalLiveScene.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -636,8 +648,12 @@
 			files = (
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				9B1913F1246B6301009B0835 /* IntroductionScene.swift in Sources */,
+				9B0DB749246D7CBC00DAA68D /* WaterLiveScene.swift in Sources */,
+				9B0DB74B246D7E0F00DAA68D /* SeedLiveScene.swift in Sources */,
 				9BDDB18D246C23E200B0DDE9 /* Cactus.swift in Sources */,
+				9B0DB74D246DC13F00DAA68D /* SunLiveScene.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
+				9B0DB74F246DF96A00DAA68D /* FinalLiveScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,3 +33,39 @@ public func IntroductionLiveView() -> PlaygroundLiveViewable{
     
     return view
 }
+
+public func WaterLiveView() -> PlaygroundLiveViewable{
+    let view = SKView()
+    let scene = WaterLiveViewScene()
+    scene.scaleMode = .resizeFill
+    view.presentScene(scene)
+    
+    return view
+}
+
+public func SeedLiveView() -> PlaygroundLiveViewable{
+    let view = SKView()
+    let scene = SeedLiveScene()
+    scene.scaleMode = .resizeFill
+    view.presentScene(scene)
+    
+    return view
+}
+
+public func SunLiveView() -> PlaygroundLiveViewable{
+    let view = SKView()
+    let scene = SunLiveScene()
+    scene.scaleMode = .resizeFill
+    view.presentScene(scene)
+    
+    return view
+}
+
+public func FinalLiveView() -> PlaygroundLiveViewable{
+    let view = SKView()
+    let scene = FinalLiveScene()
+    scene.scaleMode = .resizeFill
+    view.presentScene(scene)
+    
+    return view
+}
