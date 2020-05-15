@@ -9,8 +9,9 @@
 
 /*:
  
- # What's the next stepe??
+ # What's the next step?
  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- 
+So, now that you have your cactus properly planted, watered and insolated, keep the same care. Cultivation is always beneficial for both sides: while you take care of your cactus, it teaches you to have responsibilities and attention to details, after all it is a life we are talking about!
+
+And why do I love cacti? Because even with my crazy routine, in which I forget to drink water or forget to just stop and enjoy the sun, I know that they will be there firm and strong waiting for the next watering, the next rain and the next sun with optimism and strength !
  */

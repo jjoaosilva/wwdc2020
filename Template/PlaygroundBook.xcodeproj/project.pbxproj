@@ -29,6 +29,7 @@
 		9B0DB74D246DC13F00DAA68D /* SunLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74C246DC13F00DAA68D /* SunLiveScene.swift */; };
 		9B0DB74F246DF96A00DAA68D /* FinalLiveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DB74E246DF96A00DAA68D /* FinalLiveScene.swift */; };
 		9B1913F1246B6301009B0835 /* IntroductionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1913F0246B6301009B0835 /* IntroductionScene.swift */; };
+		9B53BB9C246E05BA00B5F8E1 /* capa.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B53BB9B246E05BA00B5F8E1 /* capa.png */; };
 		9BDDB18D246C23E200B0DDE9 /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDDB18C246C23E200B0DDE9 /* Cactus.swift */; };
 		9BDDB190246C763300B0DDE9 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BDDB18F246C763300B0DDE9 /* Glossary.plist */; };
 /* End PBXBuildFile section */
@@ -139,7 +140,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E086DC02051C5A7004D8D25 /* PlaygroundBook.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundBook.playgroundbook; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E086DC02051C5A7004D8D25 /* MyCactusBook.playgroundbook */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCactusBook.playgroundbook; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BookOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
 		5E086DCD2051DDB8004D8D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LiveView.storyboard; sourceTree = "<group>"; };
 		5E086DCF2051DF0F004D8D25 /* Manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Manifest.plist; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		9B0DB74C246DC13F00DAA68D /* SunLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunLiveScene.swift; sourceTree = "<group>"; };
 		9B0DB74E246DF96A00DAA68D /* FinalLiveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalLiveScene.swift; sourceTree = "<group>"; };
 		9B1913F0246B6301009B0835 /* IntroductionScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionScene.swift; sourceTree = "<group>"; };
+		9B53BB9B246E05BA00B5F8E1 /* capa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capa.png; sourceTree = "<group>"; };
 		9BDDB18C246C23E200B0DDE9 /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
 		9BDDB18F246C763300B0DDE9 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,7 +215,7 @@
 		5E086DA4204F706E004D8D25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E086DC02051C5A7004D8D25 /* PlaygroundBook.playgroundbook */,
+				5E086DC02051C5A7004D8D25 /* MyCactusBook.playgroundbook */,
 				5EF2F9AB2054BBF300191409 /* libBookCore.a */,
 				5E6F7E612368FB6A008CC191 /* libBookAPI.a */,
 				5E6F7E742368FF15008CC191 /* libUserModule.a */,
@@ -396,6 +398,7 @@
 		5EF2F9792054B64800191409 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
+				9B53BB9B246E05BA00B5F8E1 /* capa.png */,
 				5EF2F97E2054B6E400191409 /* ManifestPlist.strings */,
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
 				5E551EC42371FC3F00784365 /* Assets.xcassets */,
@@ -434,7 +437,7 @@
 			);
 			name = PlaygroundBook;
 			productName = PlaygroundBook;
-			productReference = 5E086DC02051C5A7004D8D25 /* PlaygroundBook.playgroundbook */;
+			productReference = 5E086DC02051C5A7004D8D25 /* MyCactusBook.playgroundbook */;
 			productType = "com.apple.product-type.bundle";
 		};
 		5E6F7E602368FB6A008CC191 /* BookAPI */ = {
@@ -565,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDDB190246C763300B0DDE9 /* Glossary.plist in Resources */,
+				9B53BB9C246E05BA00B5F8E1 /* capa.png in Resources */,
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,

@@ -7,37 +7,22 @@
 //
 //#-end-hidden-code
 
-/*:
- 
- # Why do I love cactus?
- ## A quick overview of why you will also want to have one.
- 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- 
- */
 //#-hidden-code
 
-//import UIKit
-//import PlaygroundSupport
-//import SpriteKit
-//import BookCore
-//
-//class IntroductionViewController: UIViewController{
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        setup()
-//    }
-//
-//    func setup(){
-//        let view = SKView()
-//        let scene = IntroductionScene()
-//        scene.scaleMode = .resizeFill
-//        view.presentScene(scene)
-//
-//        self.view = view
-//    }
-//}
-//// Present the view controller in the Live View window
-//PlaygroundPage.current.liveView = IntroductionViewController()
+import PlaygroundSupport
 
 //#-end-hidden-code
+
+/*:
+ 
+ # Why do I love cacti?
+ ## An overview of why you will also love it!
+ 
+Hello, my name is José João, I study Computer Engineering at the Federal University of Ceará and I am a student at IFCE | Apple Developer Academy Program. In these few months of the program, I feel more and more pleasure in producing my illustrations, feeling the graphite on paper, getting my hands dirty and putting the most random ideas on paper.
+ 
+But it's not just graphite that I like to get my hands dirty! Have you heard of gardening? So, from the time of school I loved to study botany, how plants grow and adapt. And it was in my always crazy routine that I met the cacti!
+ 
+ [Next Page](@next)
+*/
+
+

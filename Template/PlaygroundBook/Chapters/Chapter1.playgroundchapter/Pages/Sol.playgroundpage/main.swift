@@ -9,20 +9,19 @@
 
 /*:
  
- # Aquele solzinho que a gente gosta!
+ # That sun that we like!
  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+It is indisputable: like any other plant, cacti need sun. The difference that few people know is that each species requires a different amount of sun. For example, Mammillaria asks for a lot of sun, Chamaecereus Silvestrii must be created in half shade, that is, it does not need to stay 100% of the day in a sunny place. With the right care, your cactus can reach 200 years of age (creating family heirlooms) and reach 20 meters in height!
  
- 
- Nesse caso, voce tera a opcao: Hoje voce vai tomar sol ou nao?
+ In this case, you will have the option: Today are you going to sunbathe or not?
  
   * Experiment:
-  Vamos regar nosso cacto?
+ Let's get a tan?
  
-     1. Insira um valor para a variável [`withSun`](glossary://withSun)
-     2. Execute o programa e veja o que acontece!
+     1. Enter a value for the variable [`withSun`](glossary://withSun)
+     2. Run the code
  
-    Agora voce concorda comigo? Seu cacto é forte mais nao invencivel!
+    Sun in the right amount is the right way!
  */
 
 //#-hidden-code
@@ -58,7 +57,11 @@ public class SunScene: SKScene{
     var sun: SKShapeNode = SKShapeNode(circleOfRadius: 60)
 
 //#-end-hidden-code
-var withSun: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/*#-end-editable-code*/
+//#-code-completion(everything, hide)
+//#-code-completion(identifier, show, true, false)
+var withSun: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>/*#-end-editable-code*/
+    
+//: [Next Page](@next)
 //#-hidden-code
 
     
@@ -106,6 +109,9 @@ var withSun: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/*#
             
             filhote02.run(fadeOut)
             filhote03.run(fadeIn)
+            
+            PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+            
         }else{
             dead.position.x = x/2
             dead.position.y = y/2 - 180
@@ -123,9 +129,9 @@ var withSun: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/*#
             
             filhote02.run(fadeOut)
             dead.run(fadeIn)
+            
+            PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withSun`. If it's false, your cactus will die."], solution: "You can try: `var withSun: Bool = true`")
         }
-        
-        
     }
 }
 

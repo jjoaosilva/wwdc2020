@@ -9,20 +9,19 @@
 
 /*:
  
- # O seu Cacto é forte mas nao é invencivel!
+ # Your cactus is strong but not invincible!
  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Of course, cacti are more resistant to water shortages! Its leaves have evolved into thorns to reduce perspiration, usually they grow horizontally to make more use of the water that accumulates in the soil and still manage to reproduce both by seeds and by cuttings !!! But one thing that doesn't change is: YES IT NEEDS WATER!
  
- 
- Nesse caso, voce tera a opcao: Hoje voce vai dar agua pro seu cacto ou nao?
+In this case, you will have the option: Today are you going to give water to your cactus or not?
  
   * Experiment:
-  Vamos regar nosso cacto?
+  Let's water your cacti?
  
-     1. Insira um valor para a variável [`withWater`](glossary://withWater)
-     2. Execute o programa e veja o que acontece!
+     1. Enter a value for the variable [`withWater`](glossary://withWater)
+      2. Run the code
  
-    Agora voce concorda comigo? Seu cacto é forte mais nao invencivel!
+Now do you agree with me? Your cactus is strong but not invincible!
  */
 
 //#-hidden-code
@@ -55,9 +54,13 @@ public class WaterScene: SKScene{
     var filhote02: SKSpriteNode = SKSpriteNode(imageNamed: "filhote02")
     var dead: SKSpriteNode = SKSpriteNode(imageNamed: "dead")
     var seco: SKSpriteNode = SKSpriteNode(imageNamed: "seco")
-
+    
 //#-end-hidden-code
-var withWater: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/*#-end-editable-code*/
+//#-code-completion(everything, hide)
+//#-code-completion(identifier, show, true, false)
+var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>/*#-end-editable-code*/
+    
+//: [Next Page](@next)
 //#-hidden-code
     var gota01: SKShapeNode = SKShapeNode(circleOfRadius: 10)
     var gota02: SKShapeNode = SKShapeNode(circleOfRadius: 5)
@@ -190,6 +193,9 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/
             
             filhote01.run(fadeOut)
             filhote02.run(fadeIn)
+
+            PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+            
         }else{
             
             let y = self.size.height/2 - 100
@@ -212,12 +218,12 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Insira aqui#>/
             seco.run(repeatRotationHr)
             seco.run(SKAction.sequence([scaleOut, move]))
             
+            PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withWater`. If it's false, your cactus will die."], solution: "You can try: `var withWater: Bool = true`")
         }
-        
-        
     }
 }
 
 // Present the view controller in the Live View window
+
 PlaygroundPage.current.liveView = WaterViewController()
 //#-end-hidden-code
