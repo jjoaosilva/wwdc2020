@@ -25,9 +25,9 @@
 		<string>BookAPI</string>
 	</array>
 	<key>UserModuleMode</key>
-	<string>Full</string>
+	<string>Disabled</string>
 	<key>SupportsDarkMode</key>
-	<true/>
+	<false/>
 	<key>ImageReference</key>
 	<string>capa.png</string>
 </dict>

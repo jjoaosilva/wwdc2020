@@ -13,7 +13,6 @@
 		5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E551EC42371FC3F00784365 /* Assets.xcassets */; };
 		5E6F7E592367B529008CC191 /* UserModules in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E6F7E582367B51E008CC191 /* UserModules */; };
 		5E6F7E6C2368FC01008CC191 /* BookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F7E5C2367B64A008CC191 /* BookAPI.swift */; };
-		5E6F7E7D2368FF29008CC191 /* SharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7067A323678E220094BDEF /* SharedCode.swift */; };
 		5E70679F23678DC30094BDEF /* Modules in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5E70679E23678DC00094BDEF /* Modules */; };
 		5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2E3BF2056F35A00416A35 /* AppDelegate.swift */; };
 		5EA2E3CA2056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2E3C82056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard */; };
@@ -71,20 +70,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5E6F7E602368FB6A008CC191;
 			remoteInfo = BookAPI;
-		};
-		5E6F7E7B2368FF1D008CC191 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E6F7E602368FB6A008CC191;
-			remoteInfo = BookAPI;
-		};
-		5E6F7E7E2368FF3D008CC191 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E6F7E732368FF15008CC191;
-			remoteInfo = UserModule;
 		};
 		5EA2E3CF2056F36100416A35 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -154,9 +139,7 @@
 		5E6F7E5C2367B64A008CC191 /* BookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPI.swift; sourceTree = "<group>"; };
 		5E6F7E612368FB6A008CC191 /* libBookAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6F7E6D2368FC9A008CC191 /* ModuleOverridingBuildSettings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ModuleOverridingBuildSettings.xcconfig; sourceTree = "<group>"; };
-		5E6F7E742368FF15008CC191 /* libUserModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUserModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E70679E23678DC00094BDEF /* Modules */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Modules; sourceTree = "<group>"; };
-		5E7067A323678E220094BDEF /* SharedCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCode.swift; sourceTree = "<group>"; };
 		5E80DF292342971E00595EB4 /* LiveViewTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveViewTestApp.entitlements; sourceTree = "<group>"; };
 		5EA2E3BD2056F35A00416A35 /* LiveViewTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveViewTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA2E3BF2056F35A00416A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,13 +170,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E6F7E712368FF15008CC191 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5EA2E3BA2056F35A00416A35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,7 +194,6 @@
 				5E086DC02051C5A7004D8D25 /* MyCactusBook.playgroundbook */,
 				5EF2F9AB2054BBF300191409 /* libBookCore.a */,
 				5E6F7E612368FB6A008CC191 /* libBookAPI.a */,
-				5E6F7E742368FF15008CC191 /* libUserModule.a */,
 				5EA2E3BD2056F35A00416A35 /* LiveViewTestApp.app */,
 			);
 			name = Products;
@@ -229,7 +204,6 @@
 			children = (
 				5E086DCF2051DF0F004D8D25 /* Manifest.plist */,
 				5E70679B23678D810094BDEF /* Modules */,
-				5E7067A023678DED0094BDEF /* UserModules */,
 				5EF2F9792054B64800191409 /* PrivateResources */,
 				5EF2F9B62054E6F900191409 /* Chapters */,
 				5EF2F9A42054BB9500191409 /* Supporting Content */,
@@ -334,30 +308,6 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		5E7067A023678DED0094BDEF /* UserModules */ = {
-			isa = PBXGroup;
-			children = (
-				5E7067A123678E010094BDEF /* UserModule.playgroundmodule */,
-			);
-			path = UserModules;
-			sourceTree = "<group>";
-		};
-		5E7067A123678E010094BDEF /* UserModule.playgroundmodule */ = {
-			isa = PBXGroup;
-			children = (
-				5E7067A223678E0D0094BDEF /* Sources */,
-			);
-			path = UserModule.playgroundmodule;
-			sourceTree = "<group>";
-		};
-		5E7067A223678E0D0094BDEF /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				5E7067A323678E220094BDEF /* SharedCode.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		5EA2E3BE2056F35A00416A35 /* LiveViewTestApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,7 +383,6 @@
 			dependencies = (
 				5EF2F9B52054BDD100191409 /* PBXTargetDependency */,
 				5E6F7E6F2368FD7C008CC191 /* PBXTargetDependency */,
-				5E6F7E7F2368FF3D008CC191 /* PBXTargetDependency */,
 			);
 			name = PlaygroundBook;
 			productName = PlaygroundBook;
@@ -455,23 +404,6 @@
 			name = BookAPI;
 			productName = BookAPI;
 			productReference = 5E6F7E612368FB6A008CC191 /* libBookAPI.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		5E6F7E732368FF15008CC191 /* UserModule */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E6F7E782368FF15008CC191 /* Build configuration list for PBXNativeTarget "UserModule" */;
-			buildPhases = (
-				5E6F7E702368FF15008CC191 /* Sources */,
-				5E6F7E712368FF15008CC191 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E6F7E7C2368FF1D008CC191 /* PBXTargetDependency */,
-			);
-			name = UserModule;
-			productName = UserModule;
-			productReference = 5E6F7E742368FF15008CC191 /* libUserModule.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		5EA2E3BC2056F35A00416A35 /* LiveViewTestApp */ = {
@@ -527,9 +459,6 @@
 					5E6F7E602368FB6A008CC191 = {
 						CreatedOnToolsVersion = 11.1;
 					};
-					5E6F7E732368FF15008CC191 = {
-						CreatedOnToolsVersion = 11.1;
-					};
 					5EA2E3BC2056F35A00416A35 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
@@ -556,7 +485,6 @@
 				5E086DBF2051C5A7004D8D25 /* PlaygroundBook */,
 				5EF2F9AA2054BBF300191409 /* BookCore */,
 				5E6F7E602368FB6A008CC191 /* BookAPI */,
-				5E6F7E732368FF15008CC191 /* UserModule */,
 				5EA2E3BC2056F35A00416A35 /* LiveViewTestApp */,
 			);
 		};
@@ -630,14 +558,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E6F7E702368FF15008CC191 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E6F7E7D2368FF29008CC191 /* SharedCode.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5EA2E3B92056F35A00416A35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,16 +598,6 @@
 			isa = PBXTargetDependency;
 			target = 5E6F7E602368FB6A008CC191 /* BookAPI */;
 			targetProxy = 5E6F7E6E2368FD7C008CC191 /* PBXContainerItemProxy */;
-		};
-		5E6F7E7C2368FF1D008CC191 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E6F7E602368FB6A008CC191 /* BookAPI */;
-			targetProxy = 5E6F7E7B2368FF1D008CC191 /* PBXContainerItemProxy */;
-		};
-		5E6F7E7F2368FF3D008CC191 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E6F7E732368FF15008CC191 /* UserModule */;
-			targetProxy = 5E6F7E7E2368FF3D008CC191 /* PBXContainerItemProxy */;
 		};
 		5EA2E3D02056F36100416A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -891,20 +801,6 @@
 			};
 			name = Release;
 		};
-		5E6F7E792368FF15008CC191 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E6F7E6D2368FC9A008CC191 /* ModuleOverridingBuildSettings.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		5E6F7E7A2368FF15008CC191 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E6F7E6D2368FC9A008CC191 /* ModuleOverridingBuildSettings.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
 		5EA2E3CC2056F35B00416A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -998,15 +894,6 @@
 			buildConfigurations = (
 				5E6F7E662368FB6A008CC191 /* Debug */,
 				5E6F7E672368FB6A008CC191 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5E6F7E782368FF15008CC191 /* Build configuration list for PBXNativeTarget "UserModule" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E6F7E792368FF15008CC191 /* Debug */,
-				5E6F7E7A2368FF15008CC191 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

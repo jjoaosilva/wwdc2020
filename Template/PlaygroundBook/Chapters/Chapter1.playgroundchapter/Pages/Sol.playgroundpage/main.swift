@@ -54,6 +54,7 @@ public class SunScene: SKScene{
     var dead: SKSpriteNode = SKSpriteNode(imageNamed: "dead")
     var nuvem: SKSpriteNode = SKSpriteNode(imageNamed: "nuvem")
     var sun: SKShapeNode = SKShapeNode(circleOfRadius: 60)
+    var labelType: SKLabelNode = SKLabelNode()
 //#-end-hidden-code
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, true, false)
@@ -74,6 +75,8 @@ var withSun: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
             self.addChild(dead)
             self.addChild(nuvem)
         }
+        
+        self.addChild(labelType)
     }
     
     private func configure(){
@@ -100,6 +103,12 @@ var withSun: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
     }
     
     override public func didChangeSize(_ oldSize: CGSize) {
+        labelType.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
+        labelType.position.x = self.size.width/2
+        labelType.position.y = self.size.height/8
+        labelType.fontSize = 30
+        labelType.fontName = "HelveticaNeue-Italic"
+        
         sun.fillColor = #colorLiteral(red: 0.9529411764705882, green: 0.6862745098039216, blue: 0.13333333333333333, alpha: 1.0)
         sun.strokeColor = #colorLiteral(red: 0.9254901960784314, green: 0.23529411764705882, blue: 0.10196078431372549, alpha: 1.0)
         

@@ -53,6 +53,7 @@ public class WaterScene: SKScene{
     var filhote02: SKSpriteNode = SKSpriteNode(imageNamed: "especie012")
     var dead: SKSpriteNode = SKSpriteNode(imageNamed: "dead")
     var seco: SKSpriteNode = SKSpriteNode(imageNamed: "seco")
+    var labelType: SKLabelNode = SKLabelNode()
     
 //#-end-hidden-code
 //#-code-completion(everything, hide)
@@ -84,12 +85,15 @@ var withWater: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
             case .Mammillaria:
                 self.filhote01 = SKSpriteNode(imageNamed: "especie011")
                 self.filhote02 = SKSpriteNode(imageNamed: "especie012")
+                labelType.text = "Mammillaria"
             case .CephalocereusSenilis:
                 self.filhote01 = SKSpriteNode(imageNamed: "especie021")
                 self.filhote02 = SKSpriteNode(imageNamed: "especie022")
+                labelType.text = "Cephalocereus Senilis"
             case .ChamaecereusSilvestrii:
                 self.filhote01 = SKSpriteNode(imageNamed: "especie031")
                 self.filhote02 = SKSpriteNode(imageNamed: "especie032")
+                labelType.text = "Chamaecereus Silvestrii"
             }
         }
     }
@@ -140,9 +144,16 @@ var withWater: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
             self.addChild(seco)
         }
         
+        self.addChild(labelType)
     }
     
     override public func didChangeSize(_ oldSize: CGSize) {
+        labelType.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
+        labelType.position.x = self.size.width/2
+        labelType.position.y = self.size.height/8
+        labelType.fontSize = 30
+        labelType.fontName = "HelveticaNeue-Italic"
+        
         if(withWater){
             gota01.position.x = self.size.width
             gota01.position.y = self.size.height

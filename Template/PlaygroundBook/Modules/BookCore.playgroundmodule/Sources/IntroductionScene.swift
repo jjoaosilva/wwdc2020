@@ -8,11 +8,11 @@ public class IntroductionScene: SKScene{
     var label: SKLabelNode = SKLabelNode()
     var image: SKSpriteNode = SKSpriteNode(imageNamed: "exportCactos2")
     var subTitle: SKLabelNode = SKLabelNode()
-    
+
     override public func didMove(to view: SKView) {
         self.backgroundColor = #colorLiteral(red: 0.9764705882352941, green: 0.8509803921568627, blue: 0.5490196078431373, alpha: 1.0)
-        label.text = "Why do I Love Cactus?"
-        subTitle.text = "A quick overview of why you will also want to have one"
+        label.text = "Why do I love cacti?"
+        subTitle.text = "An overview of why you will also love it!"
         label.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
         subTitle.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
         self.addChild(label)
