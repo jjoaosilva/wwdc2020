@@ -14,8 +14,30 @@ public class FinalLiveScene: SKScene{
     var filhote03: SKSpriteNode = SKSpriteNode(imageNamed: "filhote03")
     var label: SKLabelNode = SKLabelNode()
     
+    private func configure(){
+        var cacto: CactisTypes?
+
+        if let keyValue = PlaygroundKeyValueStore.current["cactoEnum"],
+            case .integer(let cactuEnum) = keyValue {
+            cacto = CactisTypes(rawValue: cactuEnum)
+        }
+
+        if let cactoType = cacto {
+            switch cactoType {
+            case .Mammillaria:
+                self.filhote03 = SKSpriteNode(imageNamed: "especie013")
+            case .CephalocereusSenilis:
+                self.filhote03 = SKSpriteNode(imageNamed: "especie023")
+            case .ChamaecereusSilvestrii:
+                self.filhote03 = SKSpriteNode(imageNamed: "especie033")
+            }
+        }
+    }
+    
     override public func didMove(to view: SKView) {
+        configure()
         self.backgroundColor = #colorLiteral(red: 0.9764705882352941, green: 0.8509803921568627, blue: 0.5490196078431373, alpha: 1.0)
+        label.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
         label.text = "So, when you will plant yours?"
         
         self.addChild(label)

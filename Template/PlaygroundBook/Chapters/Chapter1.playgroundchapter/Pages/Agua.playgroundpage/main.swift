@@ -30,7 +30,6 @@ import PlaygroundSupport
 import SpriteKit
 import BookCore
 
-
 class WaterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,18 +49,18 @@ class WaterViewController: UIViewController{
 
 public class WaterScene: SKScene{
     
-    var filhote01: SKSpriteNode = SKSpriteNode(imageNamed: "filhote01")
-    var filhote02: SKSpriteNode = SKSpriteNode(imageNamed: "filhote02")
+    var filhote01: SKSpriteNode = SKSpriteNode(imageNamed: "especie011")
+    var filhote02: SKSpriteNode = SKSpriteNode(imageNamed: "especie012")
     var dead: SKSpriteNode = SKSpriteNode(imageNamed: "dead")
     var seco: SKSpriteNode = SKSpriteNode(imageNamed: "seco")
     
 //#-end-hidden-code
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, true, false)
-var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>/*#-end-editable-code*/
+var withWater: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
     
-//: [Next Page](@next)
 //#-hidden-code
+
     var gota01: SKShapeNode = SKShapeNode(circleOfRadius: 10)
     var gota02: SKShapeNode = SKShapeNode(circleOfRadius: 5)
     var gota03: SKShapeNode = SKShapeNode(circleOfRadius: 8)
@@ -72,7 +71,31 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice
     var gota07: SKShapeNode = SKShapeNode(circleOfRadius: 8)
     var gota08: SKShapeNode = SKShapeNode(circleOfRadius: 5)
     
+    private func configure(){
+        var cacto: CactisTypes?
+
+        if let keyValue = PlaygroundKeyValueStore.current["cactoEnum"],
+            case .integer(let cactuEnum) = keyValue {
+            cacto = CactisTypes(rawValue: cactuEnum)
+        }
+
+        if let cactoType = cacto {
+            switch cactoType {
+            case .Mammillaria:
+                self.filhote01 = SKSpriteNode(imageNamed: "especie011")
+                self.filhote02 = SKSpriteNode(imageNamed: "especie012")
+            case .CephalocereusSenilis:
+                self.filhote01 = SKSpriteNode(imageNamed: "especie021")
+                self.filhote02 = SKSpriteNode(imageNamed: "especie022")
+            case .ChamaecereusSilvestrii:
+                self.filhote01 = SKSpriteNode(imageNamed: "especie031")
+                self.filhote02 = SKSpriteNode(imageNamed: "especie032")
+            }
+        }
+    }
+    
     override public func didMove(to view: SKView) {
+        configure()
         self.backgroundColor = #colorLiteral(red: 0.9764705882352941, green: 0.8509803921568627, blue: 0.5490196078431373, alpha: 1.0)
         
         
@@ -192,9 +215,16 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice
             let fadeIn = SKAction.fadeIn(withDuration: 2)
             
             filhote01.run(fadeOut)
-            filhote02.run(fadeIn)
-
-            PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+            
+            let finish: SKAction = SKAction.run {
+                PlaygroundPage.current.assessmentStatus = .pass(message: "Good job!!! [Next Page](@next)")
+            }
+                    
+            let seq:SKAction = SKAction.sequence( [ fadeIn, finish ])
+             
+            filhote02.run(seq)
+            
+            
             
         }else{
             
@@ -215,10 +245,12 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice
             
             let move = SKAction.move(to:CGPoint(x: finalX, y: y+300), duration:10)
             
-            seco.run(repeatRotationHr)
-            seco.run(SKAction.sequence([scaleOut, move]))
+            let finish: SKAction = SKAction.run {
+                PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withWater`. If it's false, your cactus will die."], solution: "You can try: `var withWater: Bool = true`")
+            }
             
-            PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withWater`. If it's false, your cactus will die."], solution: "You can try: `var withWater: Bool = true`")
+            seco.run(repeatRotationHr)
+            seco.run(SKAction.sequence([scaleOut, move, finish]))
         }
     }
 }
@@ -226,4 +258,5 @@ var withWater: Bool =  /*#-editable-code number of repetitions*/<#Do your choice
 // Present the view controller in the Live View window
 
 PlaygroundPage.current.liveView = WaterViewController()
+
 //#-end-hidden-code

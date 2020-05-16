@@ -7,12 +7,12 @@
 		<key>withSun</key>
 		<dict>
 			<key>Definition</key>
-			<string>Note that whitSun is of the Boolean type, so you may receive `true` or` false` values</string>
+			<string>Note that whitSun is of the Boolean type, so you may receive `true` or `false` values</string>
 		</dict>
 		<key>withWater</key>
 		<dict>
 			<key>Definition</key>
-			<string>Note that whitWater is of the Boolean type, so you may receive `true` or` false` values</string>
+			<string>Note that whitWater is of the Boolean type, so you may receive `true` or `false` values</string>
 		</dict>
 		<key>command</key>
 		<dict>

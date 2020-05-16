@@ -19,7 +19,7 @@ So, I could just tell you that cacti are plants from desert regions, dry places 
 - `CactisTypes.CephalocereusSenilis`
 - `CactisTypes.ChamaecereusSilvestrii`
  
-Each of these species has a characteristic. Mammillaria, known as the pin cushion, grows very little, reaching only 10cm in height, while Cephalocereus Senilis, known as Barba de Velho, has large amounts of white hair, hence the name. And finally Chamaecereus Silvestrii, known as Peanut Cactus, grows on branches, so it needs a bigger jar and is great if you want to see changes in the spring, its flowers are beautiful!
+Each of these species has a characteristic. Mammillaria, known as the pin cushion, grows very little, reaching only 10cm in height, while Cephalocereus Senilis, known as old man beard, has large amounts of white hair, hence the name. And finally Chamaecereus Silvestrii, known as Peanut Cactus, grows on branches, so it needs a bigger jar and is great if you want to see changes in the spring, its flowers are beautiful!
  
  
   * Experiment:
@@ -59,7 +59,7 @@ public class SeedScene: SKScene{
     //#-code-completion(everything, hide)
     //#-code-completion(identifier, show, ., Mammillaria, CephalocereusSenilis, ChamaecereusSilvestrii)
     //#-code-completion(identifier, show, setup())
-var seed: CactisTypes = /*#-editable-code number of repetitions*/<#T##Cactus type##CactisTypes#>/*#-end-editable-code*/
+var seed: CactisTypes = /*#-editable-code Cactus Type*//*#-end-editable-code*/
 //#-hidden-code
     
     override public func didMove(to view: SKView) {
@@ -77,14 +77,18 @@ var seed: CactisTypes = /*#-editable-code number of repetitions*/<#T##Cactus typ
         
         let sementePosFinal = CGPoint(x: self.size.width/2, y: self.size.width/2 + 160)
         
+        let finish: SKAction = SKAction.run {
+            PlaygroundPage.current.assessmentStatus = .pass(message: "Good job!!! [Next Page](@next)")
+        }
+        
         let scaleZero = SKAction.scale(to: 0, duration: 0)
         let fadeIn = SKAction.scale(to: 1, duration: 0.5)
         let move = SKAction.move(to: sementePosFinal, duration: 2)
-        let sequence = SKAction.sequence([scaleZero, fadeIn, move])
+        let sequence = SKAction.sequence([scaleZero, fadeIn, move, finish])
         
         semente.run(sequence)
         
-        PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+        PlaygroundKeyValueStore.current["cactoEnum"] = .integer(seed.rawValue)
     }
 }
 
@@ -92,5 +96,3 @@ var seed: CactisTypes = /*#-editable-code number of repetitions*/<#T##Cactus typ
 PlaygroundPage.current.liveView = SeedViewController()
 
 //#-end-hidden-code
-
-//: [Next Page](@next)

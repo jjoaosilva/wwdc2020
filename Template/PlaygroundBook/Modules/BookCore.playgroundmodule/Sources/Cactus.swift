@@ -32,10 +32,10 @@ struct LifeCycle {
     }
 }
 
-public enum CactisTypes{
-    case Mammillaria
-    case CephalocereusSenilis
-    case ChamaecereusSilvestrii
+public enum CactisTypes: Int{
+    case Mammillaria = 1
+    case CephalocereusSenilis = 2
+    case ChamaecereusSilvestrii = 3
 
     var water: Int {
         switch self {

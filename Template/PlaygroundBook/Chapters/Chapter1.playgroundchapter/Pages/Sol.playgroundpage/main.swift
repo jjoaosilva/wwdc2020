@@ -23,7 +23,6 @@ It is indisputable: like any other plant, cacti need sun. The difference that fe
  
     Sun in the right amount is the right way!
  */
-
 //#-hidden-code
 import UIKit
 import PlaygroundSupport
@@ -55,17 +54,15 @@ public class SunScene: SKScene{
     var dead: SKSpriteNode = SKSpriteNode(imageNamed: "dead")
     var nuvem: SKSpriteNode = SKSpriteNode(imageNamed: "nuvem")
     var sun: SKShapeNode = SKShapeNode(circleOfRadius: 60)
-
 //#-end-hidden-code
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, true, false)
-var withSun: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>/*#-end-editable-code*/
     
-//: [Next Page](@next)
+var withSun: Bool =  /*#-editable-code Do your choice*//*#-end-editable-code*/
+    
 //#-hidden-code
-
-    
     override public func didMove(to view: SKView) {
+        configure()
         self.backgroundColor = #colorLiteral(red: 0.9764705882352941, green: 0.8509803921568627, blue: 0.5490196078431373, alpha: 1.0)
         
         self.addChild(filhote02)
@@ -76,6 +73,29 @@ var withSun: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>
         } else {
             self.addChild(dead)
             self.addChild(nuvem)
+        }
+    }
+    
+    private func configure(){
+        var cacto: CactisTypes?
+
+        if let keyValue = PlaygroundKeyValueStore.current["cactoEnum"],
+            case .integer(let cactuEnum) = keyValue {
+            cacto = CactisTypes(rawValue: cactuEnum)
+        }
+
+        if let cactoType = cacto {
+            switch cactoType {
+            case .Mammillaria:
+                self.filhote02 = SKSpriteNode(imageNamed: "especie012")
+                self.filhote03 = SKSpriteNode(imageNamed: "especie013")
+            case .CephalocereusSenilis:
+                self.filhote02 = SKSpriteNode(imageNamed: "especie022")
+                self.filhote03 = SKSpriteNode(imageNamed: "especie023")
+            case .ChamaecereusSilvestrii:
+                self.filhote02 = SKSpriteNode(imageNamed: "especie032")
+                self.filhote03 = SKSpriteNode(imageNamed: "especie033")
+            }
         }
     }
     
@@ -107,10 +127,14 @@ var withSun: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>
             
             filhote03.run(SKAction.fadeOut(withDuration: 0))
             
-            filhote02.run(fadeOut)
-            filhote03.run(fadeIn)
+            let finish: SKAction = SKAction.run {
+                PlaygroundPage.current.assessmentStatus = .pass(message: "Good job!!! [Next Page](@next)")
+            }
+                    
+            let seq:SKAction = SKAction.sequence( [ fadeIn, finish ])
             
-            PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+            filhote02.run(fadeOut)
+            filhote03.run(seq)
             
         }else{
             dead.position.x = x/2
@@ -127,15 +151,18 @@ var withSun: Bool =  /*#-editable-code number of repetitions*/<#Do your choice#>
             
             nuvem.run(SKAction.sequence([scaleCloud, moveCloud]))
             
-            filhote02.run(fadeOut)
-            dead.run(fadeIn)
+            let finish: SKAction = SKAction.run {
+                PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withSun`. If it's false, your cactus will die."], solution: "You can try: `var withSun: Bool = true`")
+            }
+                    
+            let seq:SKAction = SKAction.sequence( [ fadeIn, finish ])
             
-            PlaygroundPage.current.assessmentStatus = .fail(hints: ["Look at the variable `withSun`. If it's false, your cactus will die."], solution: "You can try: `var withSun: Bool = true`")
+            filhote02.run(fadeOut)
+            dead.run(seq)
         }
     }
 }
 
 // Present the view controller in the Live View window
 PlaygroundPage.current.liveView = SunViewController()
-
 //#-end-hidden-code

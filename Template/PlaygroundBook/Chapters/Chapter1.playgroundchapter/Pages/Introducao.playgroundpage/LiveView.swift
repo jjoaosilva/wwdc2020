@@ -10,6 +10,6 @@ import BookCore
 import PlaygroundSupport
 
 // Instantiate a new instance of the live view from BookCore and pass it to PlaygroundSupport.
-PlaygroundPage.current.assessmentStatus = .pass(message: "[Next Page](@next)")
+PlaygroundPage.current.assessmentStatus = .pass(message: " Let's Start! [Next Page](@next)")
 
 PlaygroundPage.current.liveView = IntroductionLiveView()
