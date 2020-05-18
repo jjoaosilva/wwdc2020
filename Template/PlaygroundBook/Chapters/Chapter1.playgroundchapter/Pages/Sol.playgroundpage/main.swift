@@ -9,7 +9,7 @@
 
 /*:
  
- # That sun that we like!
+ # That sun that we like! 🌞
  
 It is indisputable: like any other plant, cacti need sun. The difference that few people know is that each species requires a different amount of sun. For example, Mammillaria asks for a lot of sun, Chamaecereus Silvestrii must be created in half shade, that is, it does not need to stay 100% of the day in a sunny place. With the right care, your cactus can reach 200 years of age (creating family heirlooms) and reach 20 meters in height!
  

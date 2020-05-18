@@ -12,11 +12,11 @@
 import PlaygroundSupport
 
 //#-end-hidden-code
-
 /*:
- 
- # Why do I love cacti?
+ # Why do I love cacti? 🌵
  ## An overview of why you will also love it!
+ 
+ ![Me](eu.png "Me")
  
 Hello, my name is Jose Joao, I study Computer Engineering at the Federal University of Ceara and I am a student at IFCE | Apple Developer Academy Program. In these few months of the program, I feel more and more pleasure in producing my illustrations, feeling the graphite on paper, getting my hands dirty and putting the most random ideas on paper.
  

@@ -13,6 +13,7 @@ public class FinalLiveScene: SKScene{
     
     var filhote03: SKSpriteNode = SKSpriteNode(imageNamed: "filhote03")
     var label: SKLabelNode = SKLabelNode()
+    var sun: SKShapeNode = SKShapeNode(circleOfRadius: 60)
     
     private func configure(){
         var cacto: CactisTypes?
@@ -40,11 +41,25 @@ public class FinalLiveScene: SKScene{
         label.fontColor = #colorLiteral(red: 0.09019607843137255, green: 0.13333333333333333, blue: 0.0392156862745098, alpha: 1.0)
         label.text = "So, when you will plant yours?"
         
+        self.addChild(sun)
         self.addChild(label)
         self.addChild(filhote03)
     }
     
     override public func didChangeSize(_ oldSize: CGSize) {
+        sun.fillColor = #colorLiteral(red: 0.9529411764705882, green: 0.6862745098039216, blue: 0.13333333333333333, alpha: 1.0)
+        sun.strokeColor = #colorLiteral(red: 0.9254901960784314, green: 0.23529411764705882, blue: 0.10196078431372549, alpha: 1.0)
+        
+        let scaleOut = SKAction.scale(to: 0.8, duration: 1.5)
+        let scaleIn = SKAction.scale(to: 1, duration: 1.5)
+        
+        sun.position.x =  self.size.width/2
+        sun.position.y =  self.size.width/2 + 600
+        
+        let repeatSun:SKAction = SKAction.repeatForever(SKAction.sequence([scaleOut, scaleIn]))
+        
+        sun.run(repeatSun)
+        
         label.position.x = self.size.width/2
         label.position.y = self.size.height/2 + 150
         label.fontSize = 40

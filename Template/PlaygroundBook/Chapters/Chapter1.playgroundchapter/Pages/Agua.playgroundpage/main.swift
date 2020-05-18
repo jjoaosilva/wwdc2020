@@ -9,7 +9,7 @@
 
 /*:
  
- # Your cactus is strong but not invincible!
+ # Your cactus is strong but not invincible! 🌧
  
 Of course, cacti are more resistant to water shortages! Its leaves have evolved into thorns to reduce perspiration, usually they grow horizontally to make more use of the water that accumulates in the soil and still manage to reproduce both by seeds and by cuttings !!! But one thing that doesn't change is: YES IT NEEDS WATER!
  

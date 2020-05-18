@@ -9,7 +9,7 @@
 
 /*:
  
- # Because not every cactus is the same cactus!
+ # Because not every cactus is the same cactus! 🌱
  
 So, I could just tell you that cacti are plants from desert regions, dry places where other plants find it difficult to survive. Yeah, I think I already said but ... this is not the focus! The focus is that there are more than 1600 species or types of cacti around the world!
  
@@ -75,7 +75,7 @@ var seed: CactisTypes = /*#-editable-code Cactus Type*//*#-end-editable-code*/
         jarro.position.x = self.size.width/2
         jarro.position.y = self.size.height/2 - 100
         
-        let sementePosFinal = CGPoint(x: self.size.width/2, y: self.size.width/2 + 160)
+        let sementePosFinal = CGPoint(x: self.size.width/2, y: self.size.height/2)
         
         let finish: SKAction = SKAction.run {
             PlaygroundPage.current.assessmentStatus = .pass(message: "Good job!!! [Next Page](@next)")
